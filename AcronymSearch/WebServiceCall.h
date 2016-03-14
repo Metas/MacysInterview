@@ -1,7 +1,7 @@
 /*!
  @header WebServiceCall.h
 
- @brief This makes webservice calls to get the acronym meanings from api http://www.nactem.ac.uk/software/acromine/dictionary.py
+ @brief MVCS pattern :This makes webservice calls to get the acronym meanings from api http://www.nactem.ac.uk/software/acromine/dictionary.py
 
  @discussion This makes webservice calls to get the acronym meanings from api http://www.nactem.ac.uk/software/acromine/dictionary.py
 
