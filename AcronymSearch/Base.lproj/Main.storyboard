@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0xr-IB-qBV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Acronym SearchApp-->
+        <scene sceneID="hoh-JX-wCq">
+            <objects>
+                <viewController title="Acronym SearchApp" id="0xr-IB-qBV" customClass="AcronymSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcL-KQ-qgg"/>
+                        <viewControllerLayoutGuide type="bottom" id="scL-Mf-Ijy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GKI-cf-lsf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KJd-B0-Id2">
+                                <rect key="frame" x="0.0" y="65" width="414" height="671"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="acronymSearchResultList" id="God-kd-FU8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="God-kd-FU8" id="e68-4z-cAt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0xr-IB-qBV" id="Bop-3T-L6a"/>
+                                    <outlet property="delegate" destination="0xr-IB-qBV" id="Epr-Go-xQB"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" prompt="See what this acronym means" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DyW-5Z-FEN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="rod-lE-2ki"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.04241945909" green="0.81060606059999996" blue="0.65458625309999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0xr-IB-qBV" id="kxI-HD-sQM"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DyW-5Z-FEN" secondAttribute="trailing" constant="-20" id="806-Ky-UDb"/>
+                            <constraint firstItem="DyW-5Z-FEN" firstAttribute="leading" secondItem="GKI-cf-lsf" secondAttribute="leadingMargin" constant="-20" id="8uH-bR-cBX"/>
+                            <constraint firstItem="DyW-5Z-FEN" firstAttribute="centerX" secondItem="GKI-cf-lsf" secondAttribute="centerX" id="Bod-zz-tsc"/>
+                            <constraint firstItem="DyW-5Z-FEN" firstAttribute="top" secondItem="bcL-KQ-qgg" secondAttribute="bottom" id="IGp-Cg-2Hy"/>
+                            <constraint firstItem="KJd-B0-Id2" firstAttribute="top" secondItem="DyW-5Z-FEN" secondAttribute="bottom" constant="-10" id="K4I-Zs-CWi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KJd-B0-Id2" secondAttribute="trailing" constant="-20" id="eF8-9y-cWV"/>
+                            <constraint firstItem="KJd-B0-Id2" firstAttribute="top" secondItem="DyW-5Z-FEN" secondAttribute="bottom" constant="-10" id="eHX-Nc-3RW"/>
+                            <constraint firstItem="scL-Mf-Ijy" firstAttribute="top" secondItem="KJd-B0-Id2" secondAttribute="bottom" id="oDN-er-y3h"/>
+                            <constraint firstItem="KJd-B0-Id2" firstAttribute="centerX" secondItem="GKI-cf-lsf" secondAttribute="centerX" id="ook-xi-gR5"/>
+                            <constraint firstItem="KJd-B0-Id2" firstAttribute="leading" secondItem="GKI-cf-lsf" secondAttribute="leadingMargin" constant="-20" id="y25-uH-hh0"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="searchAcronym" destination="DyW-5Z-FEN" id="oZ6-k4-M3p"/>
+                        <outlet property="tblViewAcronymSearchResult" destination="KJd-B0-Id2" id="vTe-iK-Tcn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtP-af-THp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="178"/>
+        </scene>
+    </scenes>
+</document>
