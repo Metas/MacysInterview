@@ -1,7 +1,7 @@
 /*!
  @header ApplicationData.h
 
- @brief This is the header file to provide singleton functions to  AcronymSearch App.
+ @brief Singleton Pattern: This is the header file to provide singleton functions to  AcronymSearch App.
 
  @discussion This is the header file to provide singleton functions to  AcronymSearch App.
 
@@ -10,7 +10,7 @@
  */
 
 #import <Foundation/Foundation.h>
-//Singleton
+
 @interface ApplicationData : NSObject
 
 @property (atomic, strong) NSString *acronymSearchURL;
